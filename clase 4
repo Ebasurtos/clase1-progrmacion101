@@ -1,0 +1,347 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOxOppGhJazE+KQ9q3r9rEh",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ebasurtos/clase1-progrmacion101/blob/main/clase%204\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 34,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "etycywXwJ1_u",
+        "outputId": "76807151-1f7e-4d84-d846-f45063889435"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['diez', 'nueve', 'ocho', 'siete', 'seis', 'cinco', 'cautro', 'tres', 'dos', 'uno']\n"
+          ]
+        }
+      ],
+      "source": [
+        "palabras = [\"uno\",\"dos\",\"tres\",\"cautro\", \"cinco\", \"seis\", \"siete\", \"ocho\", \"nueve\", \"diez\"]\n",
+        "palabras.reverse()\n",
+        "print(palabras)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "DBks7xQDRG5M"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(palabras[len(palabras)//2:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "x0L56ScdMovf",
+        "outputId": "6d38978b-75ce-4be1-e405-10fb13648949"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['seis', 'siete', 'ocho', 'nueve', 'diez']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "U8L5YiZAXUup"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "invertir el orden de una lista\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "IBtOJ0-rRmcv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palabras.append(\"once\")\n",
+        "print(palabras)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "XfIhgGNqVa_P",
+        "outputId": "60a87548-8aa3-4de1-a18c-e28bcee7ba3f"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['diez', 'nueve', 'ocho', 'siete', 'seis', 'cinco', 'cautro', 'tres', 'dos', 'uno', 'once']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_dict={'122323':'john caballero',\n",
+        "         '914343':'Pero diaz',\n",
+        "         '343433':'Julio salgado'}\n",
+        "\n",
+        "my_dict"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "qldqhSB_XpYk",
+        "outputId": "375eadfb-2a32-4c0a-f99e-c36a17b7f372"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'122323': 'john caballero', '914343': 'Pero diaz', '343433': 'Julio salgado'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 41
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list(my_dict.keys())\n",
+        "list(my_dict.values())\n",
+        "print(list(my_dict.keys())+list(my_dict.values()))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "-arWHVx0ZVZU",
+        "outputId": "6f2e3bab-d6de-456a-fb6f-0587cef9f057"
+      },
+      "execution_count": 63,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['914343', '343433', 'Pero diaz', 'Julio salgado']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list=[]\n",
+        "for item in my_dict.items():\n",
+        "  my_list += list(item)\n",
+        "my_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "LZ_S6wPzbpEk",
+        "outputId": "5c4bd6df-d8f5-463d-ab9b-f0616d3d161d"
+      },
+      "execution_count": 75,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['914343', 'Pero diaz', '343433', 'Julio salgado']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 75
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grades={'Eder': 18,\n",
+        "        'Roger': 19,\n",
+        "        'Julio': 18,\n",
+        "        'HUgo': 20}\n",
+        "for key, value in grades.items():\n",
+        "  print(key,value)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TRNj6fUDjUyM",
+        "outputId": "1740d35b-f78e-4ba4-df97-fc5339bd4d9e"
+      },
+      "execution_count": 92,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Eder 18\n",
+            "Roger 19\n",
+            "Julio 18\n",
+            "HUgo 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for key, value in grades.items():\n",
+        " print(f'La nota de {key} es {value}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CXqbeW5Kj7ef",
+        "outputId": "d267a81b-3e0b-4a87-92a7-8bcc5b38bb74"
+      },
+      "execution_count": 87,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "La nota de Eder es 18\n",
+            "La nota de Roger es 19\n",
+            "La nota de Julio es 18\n",
+            "La nota de HUgo es 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "matriz = [[1,2,3],[4,5,6],[10,8,9]]\n",
+        "print(matriz)\n",
+        "matriz[2][0]=7\n",
+        "print(matriz)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f3L1GNmunexq",
+        "outputId": "e687e6a5-ed2a-4fc9-fc3c-689b05df511f"
+      },
+      "execution_count": 103,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[1, 2, 3], [4, 5, 6], [10, 8, 9]]\n",
+            "[[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "matriz_np=np.array(matriz)\n",
+        "print(matriz_np+10)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QmsfSInxotKZ",
+        "outputId": "bcc9aee9-8037-4b91-c096-407fe5805ca8"
+      },
+      "execution_count": 107,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[11 12 13]\n",
+            " [14 15 16]\n",
+            " [17 18 19]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "matrz_1=np.array"
+      ],
+      "metadata": {
+        "id": "jVXcm6IGpadM"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
