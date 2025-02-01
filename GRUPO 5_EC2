@@ -1,0 +1,143 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPTA9SsNTH1zsWVlW0uPrqg",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ebasurtos/clase1-progrmacion101/blob/main/GRUPO%205_EC2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "PREGUNTA 1"
+      ],
+      "metadata": {
+        "id": "7srFoSezOo1J"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Solution:\n",
+        "    def clumsy(self, n: int) -> int:         #Definimos nuestra función\n",
+        "        if n < 1 or n > 10**4:                  #Validamo de acuerdo con la restricción planteada\n",
+        "        raise ValueError(\"n debe estar en el rango planteado en la restricción 1 <= n <= 10^4\")\n",
+        "                                                           #mensaje de error cuando no se cumple con la restricción\n",
+        "        operacion = ['*', '/', '+', '-']           #Creamos una lista de operaciones\n",
+        "        stack = [n]                                  #Creamos la Pila\n",
+        "        indice = 0                                               #Creamos un índice para recorre la lista de operaciones\n",
+        "\n",
+        "        for num in range(n - 1, 0, -1):    #iteramos en orden descendente\n",
+        "            op = operacion[indice % 4]    #Seleccionamos la operación actual\n",
+        "            if op == '*':                                          #Realizamos las operaciones según corresponda\n",
+        "                stack.append(stack.pop() * num)\n",
+        "            elif op == '/':\n",
+        "                stack.append(int(stack.pop() / num))\n",
+        "            elif op == '+':\n",
+        "                stack.append(num)\n",
+        "            elif op == '-':\n",
+        "                stack.append(-num)\n",
+        "            indice += 1     #Incrementamos el índice para avanzar a la siguiente operación de la lista\n",
+        "\n",
+        "        return sum(stack)"
+      ],
+      "metadata": {
+        "id": "hTrPJPmAOjx4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "PREGUNTA 2"
+      ],
+      "metadata": {
+        "id": "qtV8pBm0OlvM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "def decode_message(key, message):\n",
+        "    \"\"\"Decodifica un mensaje utilizando una clave determinada de cifrado\n",
+        "\n",
+        "    Args:\n",
+        "        key: La cadena de clave de cifrado.\n",
+        "        message: El mensaje secreto que se va a decodificar.\n",
+        "\n",
+        "    Returns:\n",
+        "        Mensaje decodificado.\n",
+        "    \"\"\"\n",
+        "\n",
+        "    #1 Crear una mapeo\n",
+        "    substitution_table = {}\n",
+        "    alphabet = \"abcdefghijklmnopqrstuvwxyz\"\n",
+        "    key_chars = \"\"\n",
+        "    for char in key:\n",
+        "        if char.islower() and char not in key_chars:\n",
+        "            key_chars += char\n",
+        "\n",
+        "    for i in range(min(len(key_chars), len(alphabet))):\n",
+        "        substitution_table[key_chars[i]] = alphabet[i]\n",
+        "\n",
+        "    #2 Decodificación del mensaje\n",
+        "    decoded_message = \"\"\n",
+        "    for char in message:\n",
+        "      if char.islower():\n",
+        "        decoded_message += substitution_table.get(char, char)\n",
+        "      elif char == ' ':\n",
+        "        decoded_message += ' '\n",
+        "      else:\n",
+        "        decoded_message += char\n",
+        "    return decoded_message\n",
+        "\n",
+        "#3 Ejemplo de uso (reemplácelo con su clave y mensaje reales):\n",
+        "key = \"happy boy\"\n",
+        "message = \"hello world\"\n",
+        "\n",
+        "decoded_message = decode_message(key, message)\n",
+        "print(f\"Mensaje decodificado: {decoded_message}\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XgysRDRALuXN",
+        "outputId": "cc4386d1-2a46-4885-f6f7-681eec199998"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mensaje decodificado: aellf wfrld\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
